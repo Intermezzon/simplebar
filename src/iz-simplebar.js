@@ -25,51 +25,51 @@ class IzSimpleBar extends HTMLElement
 			const bodyStyle = document.createElement('style');
 			bodyStyle.type = 'text/css';
 			bodyStyle.appendChild(document.createTextNode(`
-			.iz-simplebar {
-				display: flex;
-				align-items: center;
-			}
-			.iz-simplebar-label {
-				color: rgba(0,0,0,0.5);
-				margin: 10px;
-				font-size: 85%;
-			}
-			.iz-simplebar-bar {
-				flex: 1;
-				position: relative;
-			}
-			.iz-simplebar-filled {
-				opacity: 0.7;
-				height: 10px;
-				position: relative;
-			}
-			.iz-simplebar-barline {
-				height: 10px;
-				background: rgba(0,0,0,0.1);
-				overflow: hidden;
-				border-radius: 3px;
-			}
-			.iz-simplebar-value, .iz-simplebar-zero {
-				position: relative;
-				left: 0;
-			}
-			.iz-simplebar-value{
-				width: 50px;
-				text-align: center;
-				margin-left: -25px;
-				margin-bottom: 4px;
-			}
-			.iz-simplebar-zero {
-				text-align: center;
-				width: 20px;
-				margin-left: -10px;
-				font-size: 85%;
-				color: rgba(0,0,0,0.5);
-			}
-			.iz-simplebar-zero-line {
-				border-right: 2px solid rgba(0,0,0,0.4);
-				width: 9px;
-			}
+.iz-simplebar {
+	display: flex;
+	align-items: center;
+}
+.iz-simplebar-label {
+	color: rgba(0,0,0,0.5);
+	margin: 10px;
+	font-size: 85%;
+}
+.iz-simplebar-bar {
+	flex: 1;
+	position: relative;
+}
+.iz-simplebar-filled {
+	opacity: 0.7;
+	height: 10px;
+	position: relative;
+}
+.iz-simplebar-barline {
+	height: 10px;
+	background: rgba(0,0,0,0.1);
+	overflow: hidden;
+	border-radius: 3px;
+}
+.iz-simplebar-value, .iz-simplebar-zero {
+	position: relative;
+	left: 0;
+}
+.iz-simplebar-value{
+	width: 50px;
+	text-align: center;
+	margin-left: -25px;
+	margin-bottom: 4px;
+}
+.iz-simplebar-zero {
+	text-align: center;
+	width: 20px;
+	margin-left: -10px;
+	font-size: 85%;
+	color: rgba(0,0,0,0.5);
+}
+.iz-simplebar-zero-line {
+	border-right: 2px solid rgba(0,0,0,0.4);
+	width: 9px;
+}
 			`));
 			document.body.appendChild(bodyStyle);
 		}
