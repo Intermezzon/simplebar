@@ -90,7 +90,7 @@ class IzSimpleBar extends HTMLElement
 		const valuePos = (value - this.min) / (this.max - this.min);
 
 		this.innerHTML = `<div class="iz-simplebar" style="width:` + width + `;">
-				<div class="iz-simplebar-label">` + this.formatNum(this.min) + `</div>
+				<div class="iz-simplebar-label iz-simplebar-min">` + this.formatNum(this.min) + `</div>
 				<div class="iz-simplebar-bar">
 					<div class="iz-simplebar-value" style="left:` + (valuePos * 100) + `%;color:` + color + `"></div>
 					<div class="iz-simplebar-barline" style="height:` + height + `px;">
@@ -101,7 +101,7 @@ class IzSimpleBar extends HTMLElement
 						0
 					</div>
 				</div>
-				<div class="iz-simplebar-label">` + this.formatNum(this.max) + `</div>
+				<div class="iz-simplebar-label iz-simplebar-max">` + this.formatNum(this.max) + `</div>
 			</div>`;
 
 		this.bar = this.querySelector('.iz-simplebar-filled');
@@ -119,6 +119,10 @@ class IzSimpleBar extends HTMLElement
 		this.bar.style.width = (100 * width / (this.max - this.min)) + '%';
 		this.bar.style.left = (100 * left / (this.max - this.min)) + '%';
 		this.querySelector('.iz-simplebar-value').style.left = (100 * (val - this.min) / (this.max - this.min)) + '%';
+
+		// Do not show labels if they are at 0
+		this.querySelector('.iz-simplebar-min').style.display = (this.min == 0 ? 'none' : '');
+		this.querySelector('.iz-simplebar-max').style.display = (this.max == 0 ? 'none' : '');
 
 	}
 
@@ -140,7 +144,8 @@ class IzSimpleBar extends HTMLElement
 
 	formatNum(num)
 	{
-		return (num < 0 ? '' : '+') + num;
+//		return (num < 0 ? '' : '+') + num;
+		return num;
 	}
 
 	setValue(val)
