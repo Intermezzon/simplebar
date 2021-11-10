@@ -120,9 +120,8 @@ class IzSimpleBar extends HTMLElement
 		this.bar.style.left = (100 * left / (this.max - this.min)) + '%';
 		this.querySelector('.iz-simplebar-value').style.left = (100 * (val - this.min) / (this.max - this.min)) + '%';
 
-		// Do not show labels if they are at 0
-		this.querySelector('.iz-simplebar-min').style.display = (this.min == 0 ? 'none' : '');
-		this.querySelector('.iz-simplebar-max').style.display = (this.max == 0 ? 'none' : '');
+		// Do not show zero-line if min or max is 0
+		this.querySelector('.iz-simplebar-zero').style.display = (this.min == 0 || this.max == 0 ? 'none' : '');
 
 	}
 
