@@ -27,11 +27,11 @@ class IzSimpleBar extends HTMLElement
 			bodyStyle.appendChild(document.createTextNode(`
 .iz-simplebar {
 	display: flex;
-	align-items: center;
+	align-items: end;
 }
 .iz-simplebar-label {
 	color: rgba(0,0,0,0.5);
-	margin: 10px;
+	margin: 0 10px;
 	font-size: 85%;
 }
 .iz-simplebar-bar {

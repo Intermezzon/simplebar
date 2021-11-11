@@ -1,6 +1,6 @@
 {
   "name": "@intermezzon/simplebar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple barchart web component",
   "scripts": {
     "build": "babel src -d lib && terser lib/iz-simplebar.js --compress --mangle -o lib/iz-simplebar.min.js"
